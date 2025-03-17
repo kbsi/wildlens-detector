@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=sqlite:///./test.db
+      - FASTAPI_ENV=development
+
+  ml_model:
+    build:
+      context: ./ml_model
+      dockerfile: Dockerfile
+    volumes:
+      - ./ml_model:/app
+    environment:
+      - MODEL_PATH=/app/models/model.h5
+
+networks:
+  default:
+    driver: bridge

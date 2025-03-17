@@ -1,0 +1,9 @@
+ml_model/data/temp_split
+ml_model/data/Mammifères
+ml_model/data/Mammifères_augmented
+ml_model/data/preprocessed_footprints
+ml_model/data/temp_dataset
+ml_model/data/footprint_dataset.csv
+ml_model/data/footprint_dataset_augmented.csv
+*.keras
+*.h5

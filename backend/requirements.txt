@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+python-multipart
+numpy
+opencv-python
+tensorflow
+scikit-learn
+pillow
+pytest
+httpx

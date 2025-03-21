@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import argparse
 
 # Configuration
-IMG_SIZE = (224, 224)  # Taille requise pour le modèle
+IMG_SIZE = (299, 299)  # Même taille que celle utilisée lors de l'entraînement
 # Chemin vers le modèle sauvegardé
 MODEL_PATH = '../../models/footprint_classifier.keras'
 
@@ -25,7 +25,12 @@ def load_prediction_model():
         sys.exit(1)
 
     print(f"Chargement du modèle depuis {model_path}...")
-    model = load_model(model_path)
+
+    # Charger le modèle en ignorant les objets personnalisés
+    model = tf.keras.models.load_model(
+        model_path,
+        compile=False  # Ne pas charger l'optimiseur et la fonction de perte
+    )
     print("Modèle chargé avec succès!")
 
     # Charger les indices des classes si disponibles

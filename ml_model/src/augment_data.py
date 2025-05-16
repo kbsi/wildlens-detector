@@ -14,9 +14,9 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 
 # Configuration
-BASE_PATH = 'data/Mammifères/'
-CSV_PATH = 'data/footprint_dataset.csv'
-OUTPUT_PATH = 'data/Mammifères_augmented/'
+BASE_PATH = 'data/Mammiferes/'
+CSV_PATH = 'data/footprint_dataset_augmented.csv'
+OUTPUT_PATH = 'data/Mammiferes_augmented/'
 # Nombre d'images augmentées à générer par image originale
 AUGMENTATIONS_PER_IMAGE = 5
 

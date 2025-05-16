@@ -4,7 +4,7 @@ import os
 import glob
 
 # Chemin vers le dossier contenant les images d'empreintes par espèce
-base_path = 'data/Mammifères_augmented/'
+base_path = 'data/Mammiferes_augmented/'
 
 # Liste des espèces basée sur les dossiers existants
 species_folders = [d for d in os.listdir(

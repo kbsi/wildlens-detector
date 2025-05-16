@@ -96,7 +96,7 @@ def create_train_val_test_dirs(data, temp_dir, train_size=0.7, val_size=0.15, te
         )
 
         # Copier les images dans les dossiers appropriés
-        base_img_dir = 'data/Mammifères_augmented/'
+        base_img_dir = 'data/Mammiferes_augmented/'
 
         # Copier les images d'entraînement
         for _, row in train_data.iterrows():
@@ -233,7 +233,7 @@ def preprocess_and_save_dataset(data, output_dir):
     for _, row in tqdm(data.iterrows(), total=len(data)):
         species = row['species']
         img_path = os.path.join(
-            'data/Mammifères_augmented/', row['image_path'])
+            'data/Mammiferes_augmented/', row['image_path'])
 
         # Prétraiter l'image
         processed_img = preprocess_footprint_image(img_path)

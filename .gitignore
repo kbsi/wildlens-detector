@@ -7,4 +7,5 @@ ml_model/data/footprint_dataset.csv
 ml_model/data/footprint_dataset_augmented.csv
 *.keras
 *.h5
+*.pth
 tf-gpu-env/
